@@ -20,10 +20,10 @@ public Rigidbody2D m_rb;
 			pos.y += Input.GetAxis("Vertical") * m_speed;
 		}
 
-		//if (Input.GetAxis("Horizontal") != 0) {
-		//	pos.x += Input.GetAxis("Horizontal") * m_rotate;
-		//}
+		if (Input.GetAxis("Horizontal") != 0) {
+			pos.x += Input.GetAxis("Horizontal") * m_rotate;
+		}
 		gameObject.transform.position = pos;
-		//gameObject.transform.rotation = pos;
+		gameObject.transform.rotation = pos;
 	}	
 }
