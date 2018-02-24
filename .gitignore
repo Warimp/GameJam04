@@ -32,5 +32,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assets/Sprites.meta
 *.meta
