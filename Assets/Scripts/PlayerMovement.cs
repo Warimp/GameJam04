@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-private Vector3  pos = Vector3.zero;
-public float m_speed = 5.0f;
-public Rigidbody m_rb;
-public float m_rotate = 1.0f;
+private Vector3 = Vector3.zero;
+public float m_speed = 1.0f;
+public Rigidbody2D m_rb;
 
 	void Awake() {
-			m_rb = GetComponent<Rigidbody>();
+			m_rb = GetComponent<Rigidbody2D>();
 	}
 
 
@@ -21,10 +20,10 @@ public float m_rotate = 1.0f;
 			pos.y += Input.GetAxis("Vertical") * m_speed;
 		}
 
-		if (Input.GetAxis("Horizontal") != 0) {
-			pos.x += Input.GetAxis("Horizontal") * m_rotate;
-		}
+		//if (Input.GetAxis("Horizontal") != 0) {
+		//	pos.x += Input.GetAxis("Horizontal") * m_rotate;
+		//}
 		gameObject.transform.position = pos;
-		gameObject.transform.rotation = pos;
+		//gameObject.transform.rotation = pos;
 	}	
 }
